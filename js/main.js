@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
 	var socketConnection = io.connect(
     "https://spacesapis-socket.zang.io/chat",
-    {query: 'tokenType=jwt&token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkX3NpZyI6IjhueTk1U2N5dGZXakhxMzZDMUpxYVFnTXd1R192WmJRcEtkZ0pTdkNuQ2MiLCJwcm9kdWN0X3R5cGUiOiJhY2NvdW50cyIsImxhc3R1cGRhdGV0aW1lIjoiMjAxOS0xMi0xOVQxOTozMTowMS44NDciLCJpc3MiOiJ6YW5nLmlvIiwicHVibGlja2V5aWQiOiJhZ3h6Zm05dVpYTnVZVEl3TVRSeUdnc1NEVWRLZDNSUWRXSnNhV05MWlhrWWdJRFF5S20yOGdzTSIsImV4cCI6MTU4NDg5NzEwMSwidXNlcl9pZCI6ImFneHpmbTl1WlhOdVlUSXdNVFJ5RVFzU0JGVnpaWElZZ0lDUXU0RG9rd2tNIiwidmVyIjoiMi4wIn0.eyd95jfMqX2Qj8wsUeQYjie7SMC1L3nexrm9QDC3yVAP-FHXkNZ70-r6dOOHlS6p4v7ImyOBpn2kr-tgCDyrJ8_A1n3vezUjSV6n2FAMPzyFEtqsS2MkVL36UfYDW7EgTCvudH-44Yg5JgYzc--4f_X_R5JHgdCboaO6WmuKXov80ImLw6DjiE62uMJIHTpPKO51b6n3myv7wGRdhz7obRc1GAuiVny1pnJPfT1E4ug0zOYUgusK8C04fWBq83PBwGAjVOunPW8JPdUpCfNjwHe0eMPCcnOl5FPxKqeZXHd0J3T1wSXBHuaMr-AVdrHueH41GWr6UJALmpvqp-TeSQ',
+    {query: 'tokenType=jwt&token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkX3NpZyI6IlJZWXU1T24zN2lSVERHak10cjVSb3c1U0F4OGlzNkJqTWtfZHVrUVk2UnMiLCJwcm9kdWN0X3R5cGUiOiJhY2NvdW50cyIsImxhc3R1cGRhdGV0aW1lIjoiMjAyMC0wMi0xOVQxNTo0Mjo1NS4yODYiLCJpc3MiOiJ6YW5nLmlvIiwicHVibGlja2V5aWQiOiJhZ3h6Zm05dVpYTnVZVEl3TVRSeUdnc1NEVWRLZDNSUWRXSnNhV05MWlhrWWdJRFE2cm5rbHdzTSIsImV4cCI6MTU5MTIwMzkwOCwidXNlcl9pZCI6ImFneHpmbTl1WlhOdVlUSXdNVFJ5RVFzU0JGVnpaWElZZ0lEZ25iaU5nUW9NIiwidmVyIjoiMi4wIn0.TucQxNCTCZpBEnpfVAd7BW7m4GZ5UMu1ATTqboVdHofpr6a5xyFPdoiCWP8B1oNz238Q7CllK8KHa75FI9FbYOPNrEq8ADJXZuDj4pVSkEkcrZ4KUaVi_M98loeMgpUKWK9m7u0JYxmZWkCgyf8EIA7g6uHuOQOQx46XZmaxpDyVWYTTJoEm6QyP06Y07Udh34c53Fb_mbhDHZOgv5YqInykDtPt_g2cNYVmGig_zVgvq8MsIAABqNL6oqomV2D4Cf7IG3BtYwPXwX8ZvPKx641vR66fY_a2biyB5BnBO4Nc1gHJKOcfFaCixUHCTtOyQNuIhgi_ngCQtS4Sk74xNw',
      transports: ['websocket']}
 	 );
 
@@ -13,11 +13,11 @@ jQuery(document).ready(function($) {
 		         bodyText: txt
 		     },
 		     sender: {
-		         _id: '5dfbc73192ca4b068e34bddc',
+		         _id: '5ced39e0bcacd1e2f6533037',
 		         type: 'user'
 		     },
 		     category: 'chat',
-		     topicId: '5e503072b257ba3189047742'
+		     topicId: '5e4ef63f61ee292fd31cc894'
 		 };
 		 socketConnection.emit('SEND_MESSAGE', message);
 		 $("#txtMessage").val("");
@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 	$('#btnCallTest').click(function() {
 		var payload = {
 			category: "tracksstatus",
-			topicId: "5e503072b257ba3189047742",
+			topicId: "5e868050592e6468d7609850",
 			content: {
 				mediaSession: {
 					audio: false,
@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
 			},
 			data:[],
 			sender: {
-				_id: '5dfbc73192ca4b068e34bddc',
+				_id: '5ba3c9b399f3924d41839a66',
 				type: 'user'
 			}
 		};
@@ -51,9 +51,9 @@ jQuery(document).ready(function($) {
 	$('#btnEndCallTest').click(function() {
 		var payload = {
 			category: "video.end",
-			topicId: "5e503072b257ba3189047742",
+			topicId: "5e868050592e6468d7609850",
 			sender: {
-				_id: "5dfbc73192ca4b068e34bddc",
+				_id: "5ba3c9b399f3924d41839a66",
 				type: "user"
 			}
 		};
@@ -66,7 +66,7 @@ jQuery(document).ready(function($) {
 		//nos subscribimos al canal
 		var spaceToSubscribe = {
 			channel: {
-				_id: '5e503072b257ba3189047742',
+				_id: '5e868050592e6468d7609850',
 				type: 'topic'
 			}
 		};			
@@ -107,13 +107,13 @@ jQuery(document).ready(function($) {
 		//Una vez subscritos notificamos que estmos conectados
 		var payload = {
 			category: 'app.event.presence.party.online',
-			topicId: '5e503072b257ba3189047742',
+			topicId: '5e868050592e6468d7609850',
 			content: {
 				desktop: false,
 				idle: false,
 				mediaSession: {
 					audio: false,
-					connected: true,
+					connected: false,
 					//phone: false,
 					screenshare: false,
 					selfMuted: true,
